@@ -1,0 +1,47 @@
+version: "3.7"
+
+volumes:
+  dbdata:
+
+networks:
+  backend-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+services:
+  #Se define un servicio como base de datos (db)
+  db:
+    build: ./db
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3006
+    networks:
+      backend-net:
+        #Se define una IP estática para acceder a la base de datos (db)
+        ipv4_address: 172.20.0.2
+
+        #Se define .env (archivo que dispone de las variables de entorno que necesita MySQL para operar)
+    env_file:
+      - ./.env
+
+    #Se asocia carpeta 'mysql' de container -> carpeta dentro de Docker-Engine
+    volumes:
+      - dbdata:/var/lib/mysql
+
+  #Se define un servicio como webserver (ws)
+  ws:
+    build: ./ws
+    container_name: apache-php
+
+    #Se asocia carpeta 'src' de host -> carpeta 'html' dentro del container 'apache-php'
+    volumes:
+      - ./src:/var/www/html
+    env_file:
+      - ./.env
+    ports:
+      - 8080:80
+    depends_on:
+      - db

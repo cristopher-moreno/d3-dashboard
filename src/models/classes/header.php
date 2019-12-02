@@ -5,31 +5,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>d3 dashboard</title>
-    <link rel="stylesheet" href="../css/bulma.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="../../models/css/bulma.min.css">
+    <link rel="stylesheet" href="../../models/css/styles.css">
 </head>
 
 <body>
     <nav class="navbar box-shadow-y has-navbar-fixed-on-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="../home.php">
-                <img src="../imgs/d3dashboard-logo.png">
+            <a class="navbar-item" href="../../views/home.php">
+                <img src="../../models/imgs/logo.png">
             </a>
         </div>
+
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="../../home.php">
+                <a class="navbar-item" href="../../views/home.php">
                     Home
                 </a>
-                <a class="navbar-item" href="../dashboard.php">
+                <a class="navbar-item" href="../../views/dashboard.php">
                     Dashboard
                 </a>
             </div>
         </div>
+
         <div class="navbar-end">
-            <form action="../administration.php">
+            <form action="../../views/administration.php">
                 <div class="navbar-item">
                     <div class="buttons">
                         <input class="button is-dark is-focused" type="submit" value="Go to Administration" />
@@ -39,3 +39,4 @@
         </div>
         </div>
     </nav>
+</body>

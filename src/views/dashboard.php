@@ -2,7 +2,8 @@
 include("../models/classes/header.php");
 require_once("../models/classes/engineData.php");
 
-$engineData = new EngineData();
+$engine = new EngineData();
+$engine->initialSetupEngineData();
 
 ?>
 

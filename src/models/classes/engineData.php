@@ -7,4 +7,20 @@ class EngineData extends DbConnect
     {
         parent::__construct();
     }
+
+public function initialSetupEngineData(){
+    
+}
+
+    public function getEngineData(){
+        $instruccion = "CALL sp_getEngineData()";
+        $consulta=$this->_db->query($instruccion);
+        $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
+        if($resultado){
+            return $resultado;
+            $resultado->close();
+            $this->_db->close();
+        }
+    }
+
 }

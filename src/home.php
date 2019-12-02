@@ -1,10 +1,10 @@
 <?php
-include("./libs/header.php");
+include("./models/libs/header.php");
 ?>
 <html lang="en">
 
 <body>
-    <img src="./imgs/Shinku_Hadoken.gif">
+    <img src="./models/imgs/Shinku_Hadoken.gif">
 </body>
 
 </html>

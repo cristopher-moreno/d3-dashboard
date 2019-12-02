@@ -20,16 +20,16 @@
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="../home.php">
+                <a class="navbar-item" href="../../home.php">
                     Home
                 </a>
-                <a class="navbar-item" href="../models/dashboard.php">
+                <a class="navbar-item" href="../dashboard.php">
                     Dashboard
                 </a>
             </div>
         </div>
         <div class="navbar-end">
-            <form action="./administration.php">
+            <form action="../administration.php">
                 <div class="navbar-item">
                     <div class="buttons">
                         <input class="button is-dark is-focused" type="submit" value="Go to Administration" />

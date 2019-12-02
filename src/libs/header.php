@@ -14,16 +14,16 @@
 <body>
     <nav class="navbar box-shadow-y has-navbar-fixed-on-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="./home.php">
+            <a class="navbar-item" href="../home.php">
                 <img src="../imgs/d3dashboard-logo.png">
             </a>
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="./home.php">
+                <a class="navbar-item" href="../home.php">
                     Home
                 </a>
-                <a class="navbar-item" href="./dashboard.php">
+                <a class="navbar-item" href="../models/dashboard.php">
                     Dashboard
                 </a>
             </div>

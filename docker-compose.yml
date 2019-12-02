@@ -17,7 +17,7 @@ services:
     container_name: mysql
     command: --default-authentication-plugin=mysql_native_password
     ports:
-      - 3306:3006
+      - 3306:3306
     networks:
       backend-net:
         #Se define una IP estática para acceder a la base de datos (db)

@@ -1,6 +1,6 @@
 <?php
-include("./classes/header.php");
-require_once("./classes/engineData.php");
+include("../models/classes/header.php");
+require_once("../models/classes/engineData.php");
 
 $engineData = new EngineData();
 

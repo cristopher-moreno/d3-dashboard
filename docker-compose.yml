@@ -4,28 +4,35 @@ volumes:
   dbdata:
 
 networks:
-  backend-net:
+  frontend-network:
     driver: bridge
     ipam:
+      driver: default
       config:
-        - subnet: 172.20.0.0/16
+        - subnet: 172.10.1.0/24
+  backend-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.10.2.0/23
 
 services:
-  #Se define un servicio como base de datos (db)
   db:
     build: ./db
-    container_name: mysql
+    container_name: mysql-db
     command: --default-authentication-plugin=mysql_native_password
     ports:
       - 3306:3306
-    networks:
-      backend-net:
-        #Se define una IP estática para acceder a la base de datos (db)
-        ipv4_address: 172.20.0.2
 
-        #Se define .env (archivo que dispone de las variables de entorno que necesita MySQL para operar)
+    #Se define una IP estática para acceder a la base de datos (db), en la red 'backend' previamente establecida
+    networks:
+      backend-network:
+        ipv4_address: 172.10.3.2
+
+    #Se define .env (archivo que dispone de las variables de entorno que necesita MySQL para operar)
     env_file:
-      - ./.env
+      - .env
 
     #Se asocia carpeta 'mysql' de container -> carpeta dentro de Docker-Engine
     volumes:
@@ -34,14 +41,24 @@ services:
   #Se define un servicio como webserver (ws)
   ws:
     build: ./ws
-    container_name: apache-php
+    container_name: php-ws
 
     #Se asocia carpeta 'src' de host -> carpeta 'html' dentro del container 'apache-php'
     volumes:
       - ./src:/var/www/html
+
     env_file:
-      - ./.env
+      - .env
+
     ports:
       - 8080:80
+
+    #Se define una IP estática, 2 redes, sino el container no logrará establecer conexión con 'mysql'
+    networks:
+      backend-network:
+        ipv4_address: 172.10.2.2
+      frontend-network:
+        ipv4_address: 172.10.1.2
+
     depends_on:
       - db

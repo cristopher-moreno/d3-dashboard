@@ -4,7 +4,7 @@ include("./libs/header.php");
 <html lang="en">
 
 <body>
-    <img src="./imgs/d3dashboard-logo.png">
+    <img src="./imgs/Shinku_Hadoken.gif">
 </body>
 
 </html>

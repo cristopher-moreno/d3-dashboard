@@ -45,7 +45,7 @@ services:
 
     #Se asocia carpeta 'src' de host -> carpeta 'html' dentro del container 'apache-php'
     volumes:
-      - ./src:/var/www/html
+      - ./src/views:/var/www/html
 
     env_file:
       - .env

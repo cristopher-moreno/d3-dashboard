@@ -9,8 +9,9 @@ class EngineData extends DbConnect
     }
 
 public function initialSetupEngineData(){
- $arr = json_decode('')   
-}
+ $arr_assoc = json_decode("./json/dbEngineData.json");
+ print_r($arr_assoc);    
+ }
 
     public function getEngineData(){
         $instruccion = "CALL sp_getEngineData()";

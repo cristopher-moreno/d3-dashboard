@@ -19,6 +19,39 @@ body {
   width: 300px;
 }
 
-.bar-chart {
-  padding: 5px;
+#chart rect {
+  fill: #4aaeea;
+}
+
+#chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+body {
+  background: #1a1a1a;
+  color: #eaeaea;
+  padding: 10px;
+}
+
+body {
+  background-color: #3c3c3c;
+  color: #cfcfcf;
+}
+div {
+  line-height: 15px;
+  margin-bottom: 3px;
+  background-color: grey;
 }

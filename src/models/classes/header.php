@@ -7,7 +7,7 @@
 
     <title>d3 dashboard</title>
 
-    <!--Se añaden: Recursos Externos-->
+    <!--Se añaden: Librerías y Recursos Externos-->
     <link rel="stylesheet" href="../../models/css/bulma.min.css">
     <link rel="stylesheet" href="../../models/css/styles.css">
     <script src="../../models/cdn/d3.js"></script>

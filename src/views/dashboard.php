@@ -12,7 +12,10 @@ $engineControl->exportEngineData($engineJson);
 ?>
 
 <body>
-    <svg></svg>
+
+    <!-- Create a div where the graph will take place -->
+    <div id="dataviz"></div>
+
 </body>
 
 <script src="engineChart.js"></script>

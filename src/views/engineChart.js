@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //Se utiliza JQuery para lograr acceder al .json file
     $.getJSON("engineJson.json", function (json) {
 
+        //Este será un arreglo con contenido objetos
         let arr = [];
 
         for (let i in json) {
@@ -39,8 +40,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
             .attr("width", svgWidth)
             .attr("height", svgHeight);
 
-        let
+        let g = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+        let x = d3.scaleTime()
+            .rangeGround([0, width]);
+
+        let y = d3.scaleLinear()
+            .rangeGround([height, 0]);
 
 
 

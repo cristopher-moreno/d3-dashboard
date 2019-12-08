@@ -4,8 +4,8 @@ require_once("../models/classes/engineData.php");
 
 $engineControl = new EngineData();
 $engineArray = $engineControl->getEngineData();
-$engineJson = json_encode($engineArray);
 
+$engineJson = json_encode($engineArray);
 $engineControl->exportEngineData($engineJson);
 
 
@@ -13,8 +13,9 @@ $engineControl->exportEngineData($engineJson);
 
 <body>
 
-    <!-- Create a div where the graph will take place -->
-    <div id="dataviz"></div>
+    <div>
+        <p>Hello there</p>
+    </div>
 
 </body>
 

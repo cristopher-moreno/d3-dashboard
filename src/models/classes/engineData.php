@@ -28,7 +28,7 @@ class EngineData extends DbConnect
         $filename = 'engineJson.json';
 
         if (file_put_contents($filename, $data)) {
-            echo ('file exported.');
+            // "JSON Data received, name is " + json.nameecho ('file exported.');
         } else {
             echo ('Some error happened.');
         }

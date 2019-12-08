@@ -23,7 +23,7 @@ class EngineData extends DbConnect
 
     public function exportEngineData($data)
     {
-        print_r($data);
+        //print_r($data);
 
         $filename = 'engineJson.json';
 

@@ -4,9 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>d3 dashboard</title>
+
+    <!--Se añaden: Recursos Externos-->
     <link rel="stylesheet" href="../../models/css/bulma.min.css">
     <link rel="stylesheet" href="../../models/css/styles.css">
+
 </head>
 
 <body>

@@ -7,6 +7,8 @@
     <title>d3 dashboard</title>
     <link rel="stylesheet" href="../../models/css/bulma.min.css">
     <link rel="stylesheet" href="../../models/css/styles.css">
+    <script type="text/javascript" src="engineJson.json"></script>
+    <script type="text/javascript" src="engineChart.js"></script>
 </head>
 
 <body>

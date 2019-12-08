@@ -8,13 +8,7 @@ class EngineData extends DbConnect
         parent::__construct();
     }
 
-    public function initialSetupEngineData()
-    {
-        $file = file_get_contents("../../models/classes/data.json");
-        $json_arr_assoc = json_decode($file, true);
-        print_r($json_arr_assoc);
-    }
-
+    
     public function getEngineData()
     {
         $instruccion = "CALL sp_getEngineData()";

@@ -2,9 +2,11 @@
 include("../models/classes/header.php");
 require_once("../models/classes/engineData.php");
 
-$engine = new EngineData();
-$engine->initialSetupEngineData();
+$engineData = new EngineData();
+$engineArray = $engineData->getEngineData();
+$json = json_encode($engineArray);
 
+print_r($json);
 ?>
 
 <body>

@@ -9,6 +9,8 @@ class DbConnect
         if ($this->_db->connect_errno) {
             echo "Fallo al conectar a la base de datos " . $this->db->connect_errno;
             return;
+        }else{
+            //*debug: echo "Conexión Correcta.";
         }
     }
 }

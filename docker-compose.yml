@@ -29,10 +29,14 @@ services:
     networks:
       backend-network:
         ipv4_address: 172.10.3.2
+    
+    environment:
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_USER=${MYSQL_USER}   
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
 
-    #Se define .env (archivo que dispone de las variables de entorno que necesita MySQL para operar)
-    env_file:
-      - .env
 
     #Se asocia carpeta 'mysql' de container -> carpeta dentro de Docker-Engine
     volumes:

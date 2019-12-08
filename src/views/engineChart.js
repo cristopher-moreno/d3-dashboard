@@ -20,7 +20,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
             });
         }
 
+        //Se establecen tamaños del svg 
+        let svgWidth = 600;
+        let svgHeight = 400;
+        let margin = {
+            top: 20,
+            right: 20,
+            bottom: 30,
+            left: 50
+        };
 
+        //Se establecen nuevos márgenes para el gráfico
+        let width = svgWidth - margin.left - margin.right;
+        let height = svgHeight - margin.top - margin.bottom;
+
+
+        let svg = d3.select('svg')
+            .attr("width", svgWidth)
+            .attr("height", svgHeight);
+
+        let
 
 
 

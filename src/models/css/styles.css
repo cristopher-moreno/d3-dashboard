@@ -18,3 +18,7 @@ body {
   position: relative;
   width: 300px;
 }
+
+.bar-chart {
+  padding: 5px;
+}

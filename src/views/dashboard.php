@@ -12,7 +12,9 @@ $engineControl->exportEngineData($engineJson);
 ?>
 
 <body>
-    <p>D3 Dashboard</p>
+    <svg class="bar-chart"></svg>
 </body>
+
 <script src="engineChart.js"></script>
-<script src="../models/jquery/jquery-3.4.1.js"></script>
+<script src="../models/cdn/jquery-3.4.1.js"></script>
+<script src="../models/cdn/d3.js"></script>

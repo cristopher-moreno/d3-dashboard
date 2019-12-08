@@ -19,5 +19,3 @@ $engineControl->exportEngineData($engineJson);
 </body>
 
 <script src="engineChart.js"></script>
-<script src="../models/cdn/jquery-3.4.1.js"></script>
-<script src="../models/cdn/d3.js"></script>

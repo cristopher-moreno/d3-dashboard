@@ -8,7 +8,7 @@ class EngineData extends DbConnect
         parent::__construct();
     }
 
-    
+
     public function getEngineData()
     {
         $instruccion = "CALL sp_getEngineData()";
@@ -18,6 +18,19 @@ class EngineData extends DbConnect
             return $resultado;
             $resultado->close();
             $this->_db->close();
+        }
+    }
+
+    public function exportEngineData($data)
+    {
+        print_r($data);
+        
+        $filename = 'engineJsonData.json';
+
+        if (file_put_contents($filename, $data)) {
+            echo ('file exported.');
+        } else {
+            echo ('Some error happened.');
         }
     }
 }

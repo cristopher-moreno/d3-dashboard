@@ -22,8 +22,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         rect.attr("width", 24)
             .data(dataArray)
-            .attr("fill", "orange")
-            .attr("height", 100)
+            .attr("fill", "LimeGreen")
+            .attr("height", function (d) {
+                return d*2;
+            })
             .attr("x", function (d, i) {
                 return i * 25;
             })

@@ -4,20 +4,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //Material Referencia: https://www.youtube.com/watch?v=nzshmMlOuwI 
     d3.json("./engineJson.json", function (error, data) {
 
-        // let dataArray = [];
+        let engineData = [];
+        let dataArray = [];
 
-        // //for each es lo mejor para recorrer objetos:
-        // for (let i in data) {
-        //     dataArray.push({
-        //         TRIP_ID: data[i].TRIP_ID,
-        //         FUEL_ECONOMY: data[i].FUEL_ECONOMY
-        //     });
-        // }
+        //for each es lo mejor para recorrer objetos:
+        for (let i in data) {
+            dataArray.push(data[i].FUEL_ECONOMY);
+            console.log(data[i].FUEL_ECONOMY);
+        }
 
         const canvas = d3.select(".canva");
-        let dataArray = [4, 15, 34];
+        const svg = canvas.append("svg")
+            .attr("width", 600)
+            .attr("height", 600);
 
-        const svg = canvas.select("svg");
+        //const svg = canvas.select("svg");
         const rect = svg.selectAll("rect");
 
         rect.data(dataArray)
@@ -28,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 return i * 25;
             })
             .attr("y", function (d, i) {
-                return 100 - (d * 2);
+                return 150 - d;
             })
             .attr("height", function (d) {
-                return d * 2;
+                return d;
             })
 
         //end: D3

@@ -13,8 +13,7 @@ $engineControl->exportEngineData($engineJson);
 
 <body>
     <div class="canva">
-        <svg>
-        </svg>
+    
     </div>
 </body>
 

@@ -16,15 +16,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         const canvas = d3.select(".canva");
         let dataArray = [4, 15, 34];
+
         const svg = canvas.select("svg");
-        const rect = svg.append("rect");
+        const rect = svg.selectAll("rect");
 
         rect.attr("width", 24)
             .data(dataArray)
             .attr("fill", "orange")
             .attr("height", 100)
-            .attr("y", function (d, i) {
-                return d * 12;
+            .attr("x", function (d, i) {
+                return i * 25;
             })
 
         //end: D3

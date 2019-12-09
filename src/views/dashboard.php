@@ -12,10 +12,11 @@ $engineControl->exportEngineData($engineJson);
 ?>
 
 <body>
-
-
-    <div class="canva" style="background-color:whitesmoke">
+    <div class="canva">
         <svg>
+            <rect></rect>
+            <rect></rect>
+            <rect></rect>
         </svg>
     </div>
 </body>

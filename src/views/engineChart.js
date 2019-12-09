@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     regresionLineal(fuel_economy, duration);
     function regresionLineal(fe, dur) {
       //EQ Recta: y = ax+b
-      let m = 10; //!Número de muestras a considerar
       let n = 0;
 
       let xsum = 0;
@@ -41,10 +40,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
       let a = 0;
       let y = 0;
 
-      n = fe.length - m;
+      n = fe.length;
 
       //! Calculando Sumatorias: Solo tomar en consideración las últimas 10 mediciones;
-      for (let i = n; i < fe.length; i++) {
+      for (let i = 0; i < n; i++) {
         xsum = xsum + fe[i];
         ysum = ysum + dur[i];
         xysum = xysum + fe[i] * dur[i];

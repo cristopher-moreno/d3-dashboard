@@ -13,20 +13,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     d3.json("./engine.json").then(data => {
 
-        let xTRIP_ID = [];
-        let yFUEL_ECONOMY = [];
-        let yCOST_RATE = [];
+        let trip_id = [];
+        let fuel_economy = [];
+        let cost_rate = [];
 
         //forEach: Best for object loop
         for (i in data) {
-            xTRIP_ID.push(data[i].TRIP_ID);
-            yFUEL_ECONOMY.push(data[i].FUEL_ECONOMY);
-            yCOST_RATE.push(data[i].COST_RATE);
+            trip_id.push(data[i].TRIP_ID);
+            fuel_economy.push(data[i].FUEL_ECONOMY);
+            cost_rate.push(data[i].COST_RATE);
         }
-        //console.log(xTRIP_ID, yFUEL_ECONOMY, yCOST_RATE);
+        //console.log(trip_id, fuel_economy, cost_rate);
 
-
-
-
+        let chartData = {
+            labels: trip_id,
+            datasets: [{
+                    label: "Fuel Economy",
+                    fill: false,
+                    lineTension: 0.1,
+                    data: fuel_economy
+                },
+                {
+                    label: "Cost Rate",
+                    fill: false,
+                    lineTension: 0.1,
+                    data: cost_rate
+                }
+            ]
+        }
     });
 });

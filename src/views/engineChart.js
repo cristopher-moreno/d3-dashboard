@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       n = fe.length;
 
-      //! Calculando Sumatorias:
+      //! Calculando Sumatorias: (acumuladores)
       for (let i = 0; i < n; i++) {
         xsum = xsum + dur[i];
         ysum = ysum + fe[i];
@@ -81,8 +81,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       trip_id.push(label);
       fuel_economy.push(y);
     }
-
-    //console.log(trip_id, fuel_economy, cost_rate);
 
     let chartData = {
       labels: trip_id,

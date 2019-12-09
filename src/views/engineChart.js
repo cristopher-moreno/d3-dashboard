@@ -13,30 +13,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     d3.json("./engine.json").then(data => {
 
-        var svg;
+        let xTRIP_ID = [];
+        let yFUEL_ECONOMY = [];
+        let yCOST_RATE = [];
 
-        //This is the accessor function we talked about above
-        var lineFunction = d3.line()
-            .x(function (d) {
-                //console.log(d.TRIP_ID);
-                return d.TRIP_ID;
-            })
-            .y(function (d) {
-                //console.log(d.FUEL_ECONOMY);
-                return d.FUEL_ECONOMY;
-            })
-            .curve(d3.curveLinear); // Use for clarity, omit for brevity.
+        //forEach: Best for object loop
+        for (i in data) {
+            xTRIP_ID.push(data[i].TRIP_ID);
+            yFUEL_ECONOMY.push(data[i].FUEL_ECONOMY);
+            yCOST_RATE.push(data[i].COST_RATE);
+        }
+        //console.log(xTRIP_ID, yFUEL_ECONOMY, yCOST_RATE);
 
-        //The SVG Container
-        var svgContainer = d3.select("body").append("svg:svg")
-            .attr("width", 200)
-            .attr("height", 200);
 
-        //The line SVG Path we draw
-        var lineGraph = svgContainer.append("path")
-            .attr("d", lineFunction(data))
-            .attr("stroke", "blue")
-            .attr("stroke-width", 2)
-            .attr("fill", "none");
+
+
     });
 });

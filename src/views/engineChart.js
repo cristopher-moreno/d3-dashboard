@@ -1,7 +1,7 @@
 // ===============================
 // Autor: Cristopher Moreno
 // Fecha Creación: 20191208
-// Fecha Modificación: 20191208
+// Fecha Modificación: 20191209
 // ===============================
 // Descripción:
 // Este script se encarga de lo siguiente:
@@ -25,8 +25,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     regresionLineal(fuel_economy, duration);
+
     function regresionLineal(fe, dur) {
-      //EQ Recta: y = a+bx
+      //Ecuación de la recta: y = a+bx
       let n = 0;
 
       let xsum = 0;
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       n = fe.length;
 
-      //! Calculando Sumatorias: Solo tomar en consideración las últimas 10 mediciones;
+      //! Calculando Sumatorias: 
       for (let i = 0; i < n; i++) {
         xsum = xsum + fe[i];
         ysum = ysum + dur[i];

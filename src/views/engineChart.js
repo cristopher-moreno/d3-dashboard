@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       y = a + b * 10;
 
+      trip_id[0] = "";
       trip_id.push("Pronóstico");
       fuel_economy.push(y);
     }

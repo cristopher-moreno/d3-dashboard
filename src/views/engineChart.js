@@ -41,15 +41,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       n = fe.length;
 
-      xsum = fe.reduce(function(acum, siguienteValor) {
-        return acum + siguienteValor;
-      }, 0);
-
-      ysum = dur.reduce(function(acum, siguienteValor) {
-        return acum + siguienteValor;
-      }, 0);
-
-      for (let i = 0; i < n; i++) {
+      //! Calculando Sumatorias: Solo tomar en consideración las últimas 10 mediciones;
+      for (let i = n - 10; i < n; i++) {
+        xsum = xsum + fe[i];
+        ysum = ysum + dur[i];
         xysum = xysum + fe[i] * dur[i];
         x2sum = x2sum + fe[i] * fe[i];
       }
@@ -69,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       y = a + b * 10;
 
-      trip_id.push('Pronóstico');
+      trip_id.push("Pronóstico");
       fuel_economy.push(y);
     }
 

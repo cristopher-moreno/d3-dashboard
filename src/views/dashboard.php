@@ -13,10 +13,11 @@ $engineControl->exportEngineData($engineJson);
 
 <body>
 
-    <div>
-        <p>Hello there</p>
-    </div>
 
+    <div class="canva" style="background-color:whitesmoke">
+        <svg>
+        </svg>
+    </div>
 </body>
 
 <script src="engineChart.js"></script>

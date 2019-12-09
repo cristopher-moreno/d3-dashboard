@@ -57,13 +57,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       a = yprom - b * xprom;
 
-      console.log(b, a);
-
       //Pronóstico para los siguientes  10 días:
       //! y = a + bx
       //! y = a + b(10)
+      pronostico = 100;
+      y = a + b * pronostico;
 
-      y = a + b * 10;
+      console.log(pronostico, y, a, b);
 
       trip_id[0] = "";
       trip_id.push("Pronóstico");

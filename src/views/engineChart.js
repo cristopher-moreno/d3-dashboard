@@ -1,40 +1,42 @@
-//Se espera que el DOM haya cargado
-document.addEventListener("DOMContentLoaded", function(event) {
-  //Material Referencia: https://www.youtube.com/watch?v=nzshmMlOuwI
-  //data: es el objeto que representa a 'engineJson.json'
+// ===============================
+// Autor: Cristopher Moreno
+// Fecha Creación: 20191208
+// Fecha Modificación: 20191208
+// ===============================
+// Descripción:
+// Este script se encarga de lo siguiente:
+// - Recibe .json
+// - Gererar gráfico lineal
+//==================================
 
-  //Seleccionar elemento por clase: '.canvas'
-  const canvas = d3.select(".canva");
+document.addEventListener("DOMContentLoaded", function (event) {
 
-  //Añadir elemento: 'svg'
-  const svg = canvas
-    .append("svg")
-    .attr("width", 600)
-    .attr("height", 600);
+    d3.json("./engine.json").then(data => {
 
-  d3.json("./engineJson.json").then(data => {
-    console.log(data);
-    //Seleccionar elementos virtuales (creados después de function '.enter().append("rect")')
-    const rect = svg.selectAll("rect");
+        var svg;
 
-    //Establecer propiedades de cada objeto virtual creado
-    rect
-      .data(data)
-      .enter()
-      .append("rect")
-      .attr("width", 24)
-      .attr("fill", "#52be80")
-      .attr("x", function(d, i) {
-        return i * 25;
-      })
-      .attr("y", function(d, i) {
-        console.log(d.FUEL_ECONOMY);
-        return 150 - d.FUEL_ECONOMY;
-      })
-      .attr("height", d => d.FUEL_ECONOMY); //arrow-function: work only in one line block
+        //This is the accessor function we talked about above
+        var lineFunction = d3.line()
+            .x(function (d) {
+                //console.log(d.TRIP_ID);
+                return d.TRIP_ID;
+            })
+            .y(function (d) {
+                //console.log(d.FUEL_ECONOMY);
+                return d.FUEL_ECONOMY;
+            })
+            .curve(d3.curveLinear); // Use for clarity, omit for brevity.
 
-    //end: D3
-  });
+        //The SVG Container
+        var svgContainer = d3.select("body").append("svg:svg")
+            .attr("width", 200)
+            .attr("height", 200);
 
-  //end: DOM
+        //The line SVG Path we draw
+        var lineGraph = svgContainer.append("path")
+            .attr("d", lineFunction(data))
+            .attr("stroke", "blue")
+            .attr("stroke-width", 2)
+            .attr("fill", "none");
+    });
 });

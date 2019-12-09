@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../../models/css/styles.css">
     <script src="../../models/cdn/d3.js"></script>
     <script src="../../models/cdn/jquery-3.4.1.js"></script>
+    <script src="../../models/cdn/Chart.min.js"></script>
+
 
 
 </head>

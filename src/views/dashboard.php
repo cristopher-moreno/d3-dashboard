@@ -12,8 +12,8 @@ $engineControl->exportEngineData($engineJson);
 ?>
 
 <body>
-    <div class="canva">
-    
+    <div class="chart-container">
+        <canvas id="mycanvas"></canvas>
     </div>
 </body>
 

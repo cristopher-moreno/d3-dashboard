@@ -75,8 +75,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       console.log("a:", a);
       console.log("y:", y);
 
+      let label = "en " + xnueva + " días";
       trip_id[0] = "";
-      trip_id.push("Pronóstico");
+      trip_id.push(label);
       fuel_economy.push(y);
     }
 

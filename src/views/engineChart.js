@@ -3,16 +3,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //Material Referencia: https://www.youtube.com/watch?v=nzshmMlOuwI
   //data: es el objeto que representa a 'engineJson.json'
 
-  d3.json("./engineJson.json", function(error, data) {
-    //Seleccionar elemento por clase: '.canvas'
-    const canvas = d3.select(".canva");
+  //Seleccionar elemento por clase: '.canvas'
+  const canvas = d3.select(".canva");
 
-    //Añadir elemento: 'svg'
-    const svg = canvas
-      .append("svg")
-      .attr("width", 600)
-      .attr("height", 600);
+  //Añadir elemento: 'svg'
+  const svg = canvas
+    .append("svg")
+    .attr("width", 600)
+    .attr("height", 600);
 
+  d3.json("./engineJson.json").then(data => {
+    console.log(data);
     //Seleccionar elementos virtuales (creados después de function '.enter().append("rect")')
     const rect = svg.selectAll("rect");
 
@@ -24,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       .attr("width", 24)
       .attr("fill", "#52be80")
       .attr("x", function(d, i) {
-        //point in space p(x,y) => p(100,15) //Cartessian Plane in computers are upside down.
         return i * 25;
       })
       .attr("y", function(d, i) {
@@ -35,5 +35,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     //end: D3
   });
+
   //end: DOM
 });

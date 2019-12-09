@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     regresionLineal(fuel_economy, duration);
     function regresionLineal(fe, dur) {
-      //EQ Recta: y = ax+b
+      //EQ Recta: y = a+bx
       let n = 0;
 
       let xsum = 0;

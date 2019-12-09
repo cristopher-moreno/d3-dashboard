@@ -87,13 +87,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
       labels: trip_id,
       datasets: [
         {
-          label: "Fuel Economy",
+          label: "Economía de Combustible",
           fill: false,
           lineTension: 0.1,
           data: fuel_economy
         },
         {
-          label: "Cost Rate",
+          label: "Tasa de Costo",
           fill: false,
           lineTension: 0.1,
           data: cost_rate

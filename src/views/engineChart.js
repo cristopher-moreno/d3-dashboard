@@ -41,5 +41,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 }
             ]
         }
+
+        //Sentencia AJAX
+        let ctx = $("#mycanvas");
+        console.log(ctx);
+
+        let LineGraph = new Chart(ctx, {
+            type: "line",
+            data: chartData
+        });
+
     });
 });

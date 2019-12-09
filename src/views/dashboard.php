@@ -14,9 +14,6 @@ $engineControl->exportEngineData($engineJson);
 <body>
     <div class="canva">
         <svg>
-            <rect></rect>
-            <rect></rect>
-            <rect></rect>
         </svg>
     </div>
 </body>

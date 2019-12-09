@@ -20,14 +20,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const svg = canvas.select("svg");
         const rect = svg.selectAll("rect");
 
-        rect.attr("width", 24)
-            .data(dataArray)
+        rect.data(dataArray)
+            .enter().append("rect")
+            .attr("width", 24)
             .attr("fill", "LimeGreen")
-            .attr("height", function (d) {
-                return d*2;
-            })
-            .attr("x", function (d, i) {
+            .attr("x", function (d, i) { //point in space p(x,y) => p(100,15) //Cartessian Plane in computers are upside down.
                 return i * 25;
+            })
+            .attr("y", function (d, i) {
+                return 100 - (d * 2);
+            })
+            .attr("height", function (d) {
+                return d * 2;
             })
 
         //end: D3

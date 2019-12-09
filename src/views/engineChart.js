@@ -6,7 +6,8 @@
 // Descripción:
 // Este script se encarga de lo siguiente:
 // - Recibe .json
-// - Gererar gráfico lineal + Punto Pronóstico mediante Regresión Lineal Simple (Chart.js / D3.js)
+// - Gererar gráfico lineal (Chart.js / D3.js)
+// - Punto Pronóstico mediante Regresión Lineal Simple (y = a + bx)
 //==================================
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     regresionLineal(fuel_economy, duration);
 
     function regresionLineal(fe, dur) {
-      //Ecuación de la recta: y = a+bx
+      //Ecuación de la recta: y = a + bx
       let n = 0;
 
       let xsum = 0;

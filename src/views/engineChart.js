@@ -9,47 +9,97 @@
 // - Gererar gráfico lineal (Chart.js / D3.js)
 //==================================
 
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function(event) {
+  d3.json("./engine.json").then(data => {
+    let trip_id = [];
+    let duration = [];
+    let fuel_economy = [];
+    let cost_rate = [];
 
-    d3.json("./engine.json").then(data => {
+    //forEach: Best for object loop
+    for (i in data) {
+      trip_id.push(data[i].TRIP_ID);
+      duration.push(data[i].TIME);
+      fuel_economy.push(data[i].FUEL_ECONOMY);
+      cost_rate.push(data[i].COST_RATE);
+    }
 
-        let trip_id = [];
-        let fuel_economy = [];
-        let cost_rate = [];
+    regresionLineal(fuel_economy, duration);
+    function regresionLineal(fe, dur) {
+      //EQ Recta: y = ax+b
+      let n = 0;
+      let xsum = 0;
+      let ysum = 0;
+      let xysum = 0;
+      let x2sum = 0;
+      let xprom = 0;
+      let yprom = 0;
 
-        //forEach: Best for object loop
-        for (i in data) {
-            trip_id.push(data[i].TRIP_ID);
-            fuel_economy.push(data[i].FUEL_ECONOMY);
-            cost_rate.push(data[i].COST_RATE);
+      let b = 0;
+      let a = 0;
+      let y = 0;
+
+      n = fe.length;
+
+      xsum = fe.reduce(function(acum, siguienteValor) {
+        return acum + siguienteValor;
+      }, 0);
+
+      ysum = dur.reduce(function(acum, siguienteValor) {
+        return acum + siguienteValor;
+      }, 0);
+
+      for (let i = 0; i < n; i++) {
+        xysum = xysum + fe[i] * dur[i];
+        x2sum = x2sum + fe[i] * fe[i];
+      }
+
+      xprom = xsum / n;
+      yprom = ysum / n;
+
+      b = (xysum - n * xprom * yprom) / (x2sum - n * (xprom * xprom));
+
+      a = yprom - b * xprom;
+
+      console.log(b, a);
+
+      //Pronóstico para los siguientes  10 días:
+      //! y = a + bx
+      //! y = a + b(10)
+
+      y = a + b * 10;
+
+      trip_id.push('Pronóstico');
+      fuel_economy.push(y);
+    }
+
+    //console.log(trip_id, fuel_economy, cost_rate);
+
+    let chartData = {
+      labels: trip_id,
+      datasets: [
+        {
+          label: "Fuel Economy",
+          fill: false,
+          lineTension: 0.1,
+          data: fuel_economy
+        },
+        {
+          label: "Cost Rate",
+          fill: false,
+          lineTension: 0.1,
+          data: cost_rate
         }
-        //console.log(trip_id, fuel_economy, cost_rate);
+      ]
+    };
 
-        let chartData = {
-            labels: trip_id,
-            datasets: [{
-                    label: "Fuel Economy",
-                    fill: false,
-                    lineTension: 0.1,
-                    data: fuel_economy
-                },
-                {
-                    label: "Cost Rate",
-                    fill: false,
-                    lineTension: 0.1,
-                    data: cost_rate
-                }
-            ]
-        }
+    //Sentencia AJAX
+    let ctx = $("#mycanvas");
+    console.log(ctx);
 
-        //Sentencia AJAX
-        let ctx = $("#mycanvas");
-        console.log(ctx);
-
-        let LineGraph = new Chart(ctx, {
-            type: "line",
-            data: chartData
-        });
-
+    let LineGraph = new Chart(ctx, {
+      type: "line",
+      data: chartData
     });
+  });
 });

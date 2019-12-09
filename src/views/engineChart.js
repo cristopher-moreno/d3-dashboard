@@ -6,7 +6,7 @@
 // Descripción:
 // Este script se encarga de lo siguiente:
 // - Recibe .json
-// - Gererar gráfico lineal (Chart.js / D3.js)
+// - Gererar gráfico lineal + Punto Pronóstico mediante Regresión Lineal Simple (Chart.js / D3.js)
 //==================================
 
 document.addEventListener("DOMContentLoaded", function(event) {

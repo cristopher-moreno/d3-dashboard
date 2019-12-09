@@ -1,4 +1,16 @@
 <?php
+// ===============================
+// Autor: Cristopher Moreno
+// Fecha Creación: 20191208
+// Fecha Modificación: -
+// ===============================
+// Descripción:
+// Este script se encarga de lo siguiente:
+// - Instanciar un objeto de la clase engineData
+// - Obtener información de la base de datos
+// - Exportar en formato .json
+//==================================
+
 include("../models/classes/header.php");
 require_once("../models/classes/engineData.php");
 

@@ -39,32 +39,41 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       let b = 0;
       let a = 0;
+      let xnueva = 0;
       let y = 0;
 
       n = fe.length;
 
-      //! Calculando Sumatorias: 
+      //! Calculando Sumatorias:
       for (let i = 0; i < n; i++) {
-        xsum = xsum + fe[i];
-        ysum = ysum + dur[i];
+        xsum = xsum + dur[i];
+        ysum = ysum + fe[i];
         xysum = xysum + fe[i] * dur[i];
-        x2sum = x2sum + fe[i] * fe[i];
+        x2sum = x2sum + dur[i] * dur[i];
       }
 
       xprom = xsum / n;
       yprom = ysum / n;
 
-      b = (xysum - n * xprom * yprom) / (x2sum - n * (xprom * xprom));
+      //! xnueva: Duración (en días) redondeada hacia menor entero próximo.
+      xnueva = Math.floor(xprom);
 
-      a = yprom - b * xprom;
+      b = (xysum - n * xprom * yprom) / (x2sum - n * xprom * xprom);
+      a = yprom - b * xnueva;
 
-      //Pronóstico para los siguientes  10 días:
-      //! y = a + bx
-      //! y = a + b(10)
-      pronostico = 100;
-      y = a + b * pronostico;
+      y = a + b * xnueva;
 
-      console.log(pronostico, y, a, b);
+      console.log("xsum:", xsum);
+      console.log("ysum:", ysum);
+      console.log("xysum:", xysum);
+      console.log("x2sum:", x2sum);
+      console.log("n:", n);
+      console.log("xprom:", xprom);
+      console.log("yprom:", yprom);
+      console.log("xnueva:", xnueva);
+      console.log("b:", b);
+      console.log("a:", a);
+      console.log("y:", y);
 
       trip_id[0] = "";
       trip_id.push("Pronóstico");

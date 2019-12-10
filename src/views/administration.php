@@ -19,7 +19,6 @@ if (isset($_POST["submit"])) {
     if ($_POST["usuario"]) {
         $_SESSION["usuario"] = $_POST["usuario"];
     }
-    //echo $_POST["tripId"];
     $engineData = new EngineData();
 } ?>
 

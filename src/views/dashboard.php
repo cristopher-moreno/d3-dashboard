@@ -24,7 +24,7 @@ $engineControl->exportEngineData($engineJson);
 ?>
 
 <body>
-    <div class="chart-container">
+    <div class="chart-container "style="padding-top: 50px;">
         <canvas id="mycanvas"></canvas>
     </div>
 </body>

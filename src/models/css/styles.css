@@ -1,41 +1,7 @@
 .box-shadow-y {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 body {
-  padding: 8px;
-}
-
-/* Style the lines by removing the fill and applying a stroke */
-.line {
-  fill: none;
-  stroke: #ffab00;
-  stroke-width: 3;
-}
-
-.overlay {
-  fill: none;
-  pointer-events: all;
-}
-
-/* Style the dots by assigning a fill and stroke */
-.dot {
-  fill: #ffab00;
-  stroke: #fff;
-}
-
-.focus circle {
-  fill: none;
-  stroke: steelblue;
-}
-
-.chart-container {
-  width: 640px;
-  height: auto;
-}
-
-div {
-  width:300px;
-  margin: auto;
-  border: 1px solid red;
+    padding: 8px;
 }

@@ -11,6 +11,8 @@
 
 include("../models/classes/header.php");
 require_once("../models/classes/engineData.php");
+require_once("../models/classes/components.php");
+
 
 if (isset($_POST["submit"])) {
     $engineData = new EngineData();
@@ -28,6 +30,9 @@ if (isset($_POST["submit"])) {
             Name
         </label>
         <input type="text" name="name" class="form-control" value="Enter a Name">
+        <?php
+        inputElement();
+        ?>
     </div>
 </form>
 </body>

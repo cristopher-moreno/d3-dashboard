@@ -31,7 +31,7 @@ if (isset($_POST["submit"])) {
         </label>
         <input type="text" name="name" class="form-control" value="Enter a Name">
         <?php
-        inputElement();
+        inputElement("is-success","Guardar");
         ?>
     </div>
 </form>

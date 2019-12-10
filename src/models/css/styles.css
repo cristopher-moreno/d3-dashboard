@@ -5,3 +5,42 @@
 body {
     padding: 8px;
 }
+
+
+/* Style the lines by removing the fill and applying a stroke */
+
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+
+/* Style the dots by assigning a fill and stroke */
+
+.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}
+
+.focus circle {
+    fill: none;
+    stroke: steelblue;
+}
+
+.chart-container {
+    width: 640px;
+    height: auto;
+}
+
+.custom-div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

@@ -34,7 +34,7 @@ class EngineData extends DbConnect
         }
     }
 
-    // TODO: HACER UN PROCEDIMIENTO ALMACENADO QUE RECIBA PARAMETROS PARA ACTUALIZAR VALORES DENTRO DE LA DB
+    // TODO: HACER UN PROCEDIMIENTO ALMACENADO (SP) QUE RECIBA PARAMETROS PARA ACTUALIZAR VALORES DENTRO DE LA DB
     public function setEngineData()
     {
         $instruccion = "CALL sp_getEngineData()";

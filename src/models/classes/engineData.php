@@ -46,4 +46,17 @@ class EngineData extends DbConnect
             $this->_db->close();
         }
     }
+
+    // public function actualizar_historial_kg($magnitud){
+    //     //Factor de Conversión: 1 kg / 2.204 lb
+    //     $kg = (($magnitud)*(1/2.204));
+    //     $lb = $magnitud;
+    //     echo "kg: ".$kg."<br>";
+    //     echo "lb: ".$lb."<br>";
+    //     $instruccion = "CALL sp_insert_historial('".$kg."','".$lb."','lb->kg')";
+    //     $actualiza = $this->_db->query($instruccion);
+    //     if($actualiza){
+    //         $this->_db->close();
+    //     }
+    // }
 }

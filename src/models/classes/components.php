@@ -20,7 +20,7 @@ function submitForm($typeElement, $texto)
   echo $element;
 }
 
-function setTripID($e)
+function setField($e)
 {
   $element = '
   <div class="forms" style="width: 200px;">

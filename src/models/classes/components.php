@@ -12,10 +12,26 @@
 // https://bulma.io/documentation/elements/button/#list-of-buttons 
 //==================================
 
-function inputElement($typeElement, $texto)
+function submitForm($typeElement, $texto)
 {
-    $element = '<div class="buttons" style="padding-top: 20px;">
-      <button class="button ' . $typeElement . '">' . $texto . '</button>
+  $element = '<div class="buttons" style="padding-top: 20px;">
+      <button name="submit" class="button ' . $typeElement . '">' . $texto . '</button>
     </div>';
-    echo $element;
+  echo $element;
+}
+
+function setTripID($e)
+{
+  $element = '
+  <div class="forms" style="width: 200px;">
+        <div class="forms">
+            <div class="field">
+                <label class="label">' . $e . '</label>
+                <div class="control">
+                    <input class="input" type="text" name="' . $e . '">
+                </div>
+            </div>
+        </div>
+  ';
+  echo $element;
 }

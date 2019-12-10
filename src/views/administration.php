@@ -14,7 +14,9 @@ require_once("../models/classes/engineData.php");
 require_once("../models/classes/components.php");
 
 
-if (isset($_POST["submit"])) {
+if (isset($_POST["Guardar"])) {
+
+
     $engineData = new EngineData();
     $_POST = array();
 } ?>
@@ -26,12 +28,19 @@ if (isset($_POST["submit"])) {
 </html>
 <form action="./administration.php" method="POST">
     <div class="form-group" style="padding-top: 30px;">
-        <label>
-            Name
-        </label>
-        <input type="text" name="name" class="form-control" value="Enter a Name">
         <?php
-        inputElement("is-success","Guardar");
+        setField("tripId");
+        setField("checkpointA");
+        setField("checkpointB");
+        setField("dateIni");
+        setField("dateEnd");
+        setField("cost");
+        setField("volume");
+        setField("length");
+        setField("time");
+        setField("fuelEconomy");
+        setField("costRate");
+        submitForm("is-success", "Guardar");
         ?>
     </div>
 </form>

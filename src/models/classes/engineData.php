@@ -28,9 +28,22 @@ class EngineData extends DbConnect
         $filename = 'engine.json';
 
         if (file_put_contents($filename, $data)) {
-            // "JSON Data received, name is " + json.nameecho ('file exported.');
+            //! Se exporta .json llamado 'engine.json'
         } else {
             echo ('Some error happened.');
+        }
+    }
+
+    // TODO: HACER UN PROCEDIMIENTO ALMACENADO QUE RECIBA PARAMETROS PARA ACTUALIZAR VALORES DENTRO DE LA DB
+    public function setEngineData()
+    {
+        $instruccion = "CALL sp_getEngineData()";
+        $consulta = $this->_db->query($instruccion);
+        $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
+        if ($resultado) {
+            return $resultado;
+            $resultado->close();
+            $this->_db->close();
         }
     }
 }

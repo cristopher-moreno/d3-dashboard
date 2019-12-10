@@ -43,6 +43,10 @@ DELIMITER //
 CREATE PROCEDURE sp_getEngineData() BEGIN
 SELECT
 	tta.TRIP_ID,
+	tta.CHECKPOINT_A,
+	tta.CHECKPOINT_B,
+	tta.DATE_INI,
+	tta.DATE_END,
 	tta.COST,
 	tta.VOLUME,
 	tta.LENGTH,

@@ -20,13 +20,13 @@ function submitForm($typeElement, $texto)
   echo $element;
 }
 
-function setField($e)
+function setField($e,$label)
 {
   $element = '
   <div class="forms" style="width: 200px;">
         <div class="forms">
             <div class="field">
-                <label class="label">' . $e . '</label>
+                <label class="label">' . $label . '</label>
                 <div class="control">
                     <input class="input" type="text" name="' . $e . '">
                 </div>

@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -39,10 +43,22 @@
         </div>
 
         <div class="navbar-end">
+            <div class="navbar-item">
+                <?php
+                if (isset($_SESSION["usuario"])) {
+                    echo '<h6 class="subtitle is-6">Bienvenido, ' . $_SESSION["usuario"] . '</h6>';
+                } else {
+                    echo '<h6 class="subtitle is-6">Bienvenido, Invitado</h6>';
+                }
+                ?>
+            </div>
+        </div>
+
+        <div class="navbar-end">
             <form action="../../views/administration.php">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <input class="button is-dark is-focused" type="submit" value="Go to Administration" />
+                        <input class="button is-dark is-focused" type="submit" value="Ir a Administración" />
                     </div>
                 </div>
             </form>

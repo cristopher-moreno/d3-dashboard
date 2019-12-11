@@ -15,10 +15,6 @@ require_once("../models/classes/components.php");
 
 
 if (isset($_POST["submit"])) {
-
-    if ($_POST["usuario"]) {
-        $_SESSION["usuario"] = $_POST["usuario"];
-    }
     $engineData = new EngineData();
 } ?>
 
@@ -27,7 +23,7 @@ if (isset($_POST["submit"])) {
 <body>
 
 </html>
-<form action="./administration.php" method="POST">
+<form action="." method="POST">
     <div class="form-group" style="padding-top: 30px;">
         <?php
         setField("usuario", "Usuario");

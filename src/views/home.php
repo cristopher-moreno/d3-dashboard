@@ -7,13 +7,14 @@
 // Descripción:
 // Este script se encarga de lo siguiente:
 // - Página de bienvenida al proyecto
+// PHP-SELF: http://form.guide/php-form/php-form-action-self.html 
 //==================================
 
 include("../models/classes/header.php");
 require_once("../models/classes/components.php");
 
-if (isset($_POST["submit"])) {
-    //hacer algo
+if (isset($_POST["submit"]) and $_POST["usuario"] != "") {
+    $_SESSION['usuario'] = $_POST['usuario'];
 }
 ?>
 <html lang="en">

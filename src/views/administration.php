@@ -26,7 +26,6 @@ if (isset($_POST["submit"])) {
 <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
     <div class="form-group" style="padding-top: 30px;">
         <?php
-        setField("usuario", "Usuario");
         setField("tripId", "Trip");
         setField("time", "Duración");
         setField("fuelEconomy", "Economía Combustible");

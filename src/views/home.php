@@ -20,7 +20,7 @@ if (isset($_POST["submit"])) {
 
 <body>
     <img src="../models/imgs/Shinku_Hadoken.gif">
-    <form action="." method="POST">
+    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
         <div class="form-group" style="padding-top: 30px;">
             <?php
             setField("usuario", "Usuario");

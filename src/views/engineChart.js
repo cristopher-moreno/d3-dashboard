@@ -86,19 +86,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
             labels: trip_id,
             datasets: [{
                     label: "Economía de Combustible",
-                    fill: false,
+                    data: fuel_economy,
                     lineTension: 0.1,
-                    data: fuel_economy
+                    fill: false,
+                    backgroundColor: 'rgba(50,205,50,0.30)',
+                    borderColor: 'rgb(34,139,34)',
+                    borderWidth: 1
                 },
                 {
                     label: "Tasa de Costo",
-                    fill: false,
+                    data: cost_rate,
                     lineTension: 0.1,
-                    data: cost_rate
+                    fill: false,
+                    backgroundColor: 'rgba(50,205,50,0.30)',
+                    borderColor: 'rgb(34,139,34)',
+                    borderWidth: 1
                 }
-            ],
-            borderColor: 'rgba(255, 99, 132, 1)',
-            borderWidth: 1
+            ]
         };
 
         //Sentencia AJAX

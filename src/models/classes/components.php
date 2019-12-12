@@ -14,13 +14,13 @@
 
 function submitForm($typeElement, $texto)
 {
-  $element = '<div class="buttons" style="padding-top: 20px;">
+  $element = '<div class="buttons" style="padding-top: 20px;width: 100px;">
       <button name="submit" class="button ' . $typeElement . '">' . $texto . '</button>
     </div>';
   echo $element;
 }
 
-function setField($e,$label)
+function setField($e, $label)
 {
   $element = '
   <div class="forms" style="width: 200px;">

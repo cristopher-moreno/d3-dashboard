@@ -25,7 +25,7 @@ if (isset($_POST["submit"]) and $_POST["usuario"] != "") {
             <img src="../models/imgs/hero-preloader-chart.gif">
         </div>
         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-            <div class="form-group" style="padding-top: 10px;">
+            <div class="form-group" style="padding-top: 5px;">
                 <?php
                 setField("usuario", "Usuario");
                 submitForm("is-success", "Ir");
@@ -33,6 +33,7 @@ if (isset($_POST["submit"]) and $_POST["usuario"] != "") {
             </div>
         </form>
     </div>
+
 </body>
 
 </html>

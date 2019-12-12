@@ -27,9 +27,9 @@ if (isset($_POST["submit"])) {
     <div class="form-group" style="padding-top: 30px;">
         <?php
         setField("tripId", "Trip");
-        setDuration("time", "Duración");
-        setField("fuelEconomy", "Economía Combustible");
-        setField("costRate", "Tasa de Costo");
+        setIntNumber("time", "Duración");
+        setNumber3d("fuelEconomy", "Economía Combustible");
+        setNumber2d("costRate", "Tasa de Costo");
         submitForm("is-success", "Guardar");
         ?>
     </div>

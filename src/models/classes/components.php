@@ -53,7 +53,8 @@ function setUser($e, $label)
   echo $element;
 }
 
-function setDuration($e, $label)
+
+function setIntNumber($e, $label)
 {
   $element = '
   <div class="forms" style="width: 200px;">
@@ -61,7 +62,41 @@ function setDuration($e, $label)
             <div class="field">
                 <label class="label">' . $label . '</label>
                 <div class="control">
-                    <input class="input" type="number" name="' . $e . '" required="true">
+                    <input class="input" type="number" min="1" step="1" max="49" name="' . $e . '" required="true">
+                </div>
+            </div>
+        </div>
+  ';
+  echo $element;
+}
+
+
+function setNumber2d($e, $label)
+{
+  $element = '
+  <div class="forms" style="width: 200px;">
+        <div class="forms">
+            <div class="field">
+                <label class="label">' . $label . '</label>
+                <div class="control">
+                    <input class="input" type="number" min="1" step="0.01" max="49" name="' . $e . '" required="true">
+                </div>
+            </div>
+        </div>
+  ';
+  echo $element;
+}
+
+
+function setNumber3d($e, $label)
+{
+  $element = '
+  <div class="forms" style="width: 200px;">
+        <div class="forms">
+            <div class="field">
+                <label class="label">' . $label . '</label>
+                <div class="control">
+                    <input class="input" type="number" min="1" step="0.001" max="49" name="' . $e . '" required="true">
                 </div>
             </div>
         </div>

@@ -13,7 +13,12 @@ require_once("../models/classes/components.php");
 include("../models/classes/header.php");
 
 //Ternary Operator in PH:
-(isset($_POST["submit"]) and  $_POST["usuario"] != "") ? ($_SESSION['usuario'] = $_POST["usuario"]) : ($_SESSION['usuario'] = "Invitado");
+
+if (isset($_POST["submit"])) {
+    if ($_POST["usuario"] != "") {
+        $_SESSION['usuario'] = $_POST["usuario"];
+    }
+}
 ?>
 <html lang="en">
 

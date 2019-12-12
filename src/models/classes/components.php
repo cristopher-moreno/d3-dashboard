@@ -36,6 +36,23 @@ function setField($e, $label)
   echo $element;
 }
 
+
+function setUser($e, $label)
+{
+  $element = '
+  <div class="forms" style="width: 200px;">
+        <div class="forms">
+            <div class="field">
+                <label class="label">' . $label . '</label>
+                <div class="control">
+                    <input class="input" type="text" name="' . $e . '">
+                </div>
+            </div>
+        </div>
+  ';
+  echo $element;
+}
+
 function setDuration($e, $label)
 {
   $element = '

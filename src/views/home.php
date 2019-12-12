@@ -9,13 +9,11 @@
 // - Página de bienvenida al proyecto
 // PHP-SELF: http://form.guide/php-form/php-form-action-self.html 
 //==================================
-
-include("../models/classes/header.php");
 require_once("../models/classes/components.php");
+include("../models/classes/header.php");
 
-if (isset($_POST["submit"]) and $_POST["usuario"] != "") {
-    $_SESSION['usuario'] = $_POST['usuario'];
-}
+//Ternary Operator in PH:
+(isset($_POST["submit"]) and  $_POST["submit"] != "") ? ($_SESSION['usuario'] = $_POST["usuario"]) : ($_SESSION['usuario'] = "Invitado");
 ?>
 <html lang="en">
 
@@ -24,11 +22,11 @@ if (isset($_POST["submit"]) and $_POST["usuario"] != "") {
         <div>
             <img src="../models/imgs/hero-preloader-chart.gif">
         </div>
-        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="off">
             <div class="form-group" style="padding-top: 5px;">
                 <?php
-                setField("usuario", "Usuario");
-                submitForm("is-success", "Ir");
+                setUser("usuario", "Usuario");
+                submitForm("is-success", "Aceptar");;
                 ?>
             </div>
         </form>

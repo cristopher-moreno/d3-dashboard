@@ -96,7 +96,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     lineTension: 0.1,
                     data: cost_rate
                 }
-            ]
+            ],
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
         };
 
         //Sentencia AJAX

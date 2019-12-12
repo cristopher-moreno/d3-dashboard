@@ -36,10 +36,10 @@ class EngineData extends DbConnect
 
     public function setEngineData($TRIP_ID, $TIME,  $FUEL_ECONOMY, $COST_RATE)
     {
-        echo $TRIP_ID . "<br>";
-        echo $TIME . "<br>";
-        echo $FUEL_ECONOMY . "<br>";
-        echo $COST_RATE . "<br>";
+        //?echo $TRIP_ID . "<br>";
+        //?echo $TIME . "<br>";
+        //?echo $FUEL_ECONOMY . "<br>";
+        //?echo $COST_RATE . "<br>";
 
         $instruccion = "CALL sp_setEngineData('" . $TRIP_ID . "', '" . $TIME . "',  '" . $FUEL_ECONOMY . "', '" . $COST_RATE . "')";
         $actualiza = $this->_db->query($instruccion);

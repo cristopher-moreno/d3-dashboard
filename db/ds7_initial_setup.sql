@@ -61,12 +61,6 @@ END//
 
 CALL sp_getEngineData();
 
-
-#
-#
-#
-DROP PROCEDURE IF EXISTS sp_setEngineData;
-
 #
 #
 #

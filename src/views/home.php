@@ -20,15 +20,19 @@ if (isset($_POST["submit"]) and $_POST["usuario"] != "") {
 <html lang="en">
 
 <body>
-    <img src="../models/imgs/Shinku_Hadoken.gif">
-    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-        <div class="form-group" style="padding-top: 30px;">
-            <?php
-            setField("usuario", "Usuario");
-            submitForm("is-success", "Guardar");
-            ?>
+    <div id="main_content">
+        <div>
+            <img src="../models/imgs/hero-preloader-chart.gif">
         </div>
-    </form>
+        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+            <div class="form-group" style="padding-top: 10px;">
+                <?php
+                setField("usuario", "Usuario");
+                submitForm("is-success", "Ir");
+                ?>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

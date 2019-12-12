@@ -15,7 +15,14 @@ require_once("../models/classes/components.php");
 
 
 if (isset($_POST["submit"])) {
+
+    $TRIP_ID = $_POST["tripId"];
+    $TIME = $_POST["time"];
+    $FUEL_ECONOMY = $_POST["fuelEconomy"];
+    $COST_RATE = $_POST["costRate"];
+
     $engineData = new EngineData();
+    $engineData->setEngineData($TRIP_ID, $TIME,  $FUEL_ECONOMY, $COST_RATE);
 } ?>
 
 <html lang="en">

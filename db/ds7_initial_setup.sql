@@ -61,3 +61,37 @@ END//
 
 CALL sp_getEngineData();
 
+
+#
+#
+#
+DROP PROCEDURE IF EXISTS sp_setEngineData;
+
+#
+#
+#
+DELIMITER //
+CREATE PROCEDURE sp_setEngineData( in P_TRIP_ID int,
+in P_TIME int,
+in P_FUEL_ECONOMY DECIMAL(5,
+3),
+in P_COST_RATE DECIMAL(3,
+2))
+BEGIN
+INSERT
+	INTO
+	tbl_trip_analysis(TRIP_ID,
+	TIME,
+	FUEL_ECONOMY,
+	COST_RATE)
+VALUES(P_TRIP_ID,
+P_TIME,
+P_FUEL_ECONOMY,
+P_COST_RATE);
+END // 
+
+#
+#
+#
+CALL sp_getEngineData(); 
+

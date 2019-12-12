@@ -35,9 +35,9 @@ class EngineData extends DbConnect
     }
 
     // TODO: HACER UN PROCEDIMIENTO ALMACENADO (SP) QUE RECIBA PARAMETROS PARA ACTUALIZAR VALORES DENTRO DE LA DB
-    public function setEngineData()
+    public function setEngineData($TRIP_ID, $TIME,  $FUEL_ECONOMY, $COST_RATE)
     {
-        $instruccion = "CALL sp_getEngineData()";
+        $instruccion = "CALL sp_getEngineData($TRIP_ID, $TIME,  $FUEL_ECONOMY, $COST_RATE)";
         $consulta = $this->_db->query($instruccion);
         $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
         if ($resultado) {

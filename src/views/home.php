@@ -17,6 +17,7 @@ include("../models/classes/header.php");
 if (isset($_POST["submit"])) {
     if ($_POST["usuario"] != "") {
         $_SESSION['usuario'] = $_POST["usuario"];
+        $_SERVER['PHP_SELF'];
     }
 }
 ?>

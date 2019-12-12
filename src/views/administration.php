@@ -23,11 +23,11 @@ if (isset($_POST["submit"])) {
 <body>
 
 </html>
-<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="off">
     <div class="form-group" style="padding-top: 30px;">
         <?php
         setField("tripId", "Trip");
-        setField("time", "Duración");
+        setDuration("time", "Duración");
         setField("fuelEconomy", "Economía Combustible");
         setField("costRate", "Tasa de Costo");
         submitForm("is-success", "Guardar");

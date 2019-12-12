@@ -28,7 +28,23 @@ function setField($e, $label)
             <div class="field">
                 <label class="label">' . $label . '</label>
                 <div class="control">
-                    <input class="input" type="text" name="' . $e . '">
+                    <input class="input" type="text" name="' . $e . '" required="true">
+                </div>
+            </div>
+        </div>
+  ';
+  echo $element;
+}
+
+function setDuration($e, $label)
+{
+  $element = '
+  <div class="forms" style="width: 200px;">
+        <div class="forms">
+            <div class="field">
+                <label class="label">' . $label . '</label>
+                <div class="control">
+                    <input class="input" type="number" name="' . $e . '" required="true">
                 </div>
             </div>
         </div>

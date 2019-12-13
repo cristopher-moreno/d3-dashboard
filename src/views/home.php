@@ -22,20 +22,29 @@ if (isset($_POST["submit"])) {
 <html lang="en">
 
 <body>
-    <div id="main_content">
-        <div>
-            <img src="../models/imgs/hero-preloader-chart.gif">
-        </div>
+    <div style="height:1000px; width:860px;">
+        <?php
+
+        $slide1 = "../models/imgs/slide1.svg";
+        $slide2 = "../models/imgs/slide2.svg";
+        $slide3 = "../models/imgs/slide3.svg";
+        $slide4 = "../models/imgs/slide4.svg";
+
+        getCarousel($slide1, $slide2, $slide3, $slide4);
+
+        ?>
+      
         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="off">
-            <div class="form-group" style="padding-top: 5px;">
+            <div class="form-group" align="center" style="padding-top: 5px;">
                 <?php
+
                 setUser("usuario", "Usuario");
-                submitForm("is-success", "Aceptar");;
+                submitForm("is-success", "Aceptar");
+
                 ?>
             </div>
         </form>
     </div>
-
 </body>
 
 </html>

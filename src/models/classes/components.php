@@ -114,7 +114,7 @@ function getBarAhorro($label, $n)
         <div class="level-item has-text-centered" >
             <div>
                 <p class="heading">' . $label . '</p>
-                <p class="title">'.round($n, 1).' %</p>
+                <p class="title">' . round($n, 1) . ' %</p>
             </div> 
         </div>
     </nav>      
@@ -123,6 +123,34 @@ function getBarAhorro($label, $n)
         </div> 
     </div>
     ';
+
+    echo $element;
+}
+
+function getCarousel($s1, $s2, $s3,$s4)
+{
+    $element = '
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="' . $s1 . '"
+          alt="1st">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="' . $s2 . '"
+          alt="2nd">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="' . $s3 . '"
+          alt="3rd">
+      </div>   
+      <div class="carousel-item">
+        <img class="d-block w-100" src="' . $s4 . '"
+          alt="4th">
+      </div>     
+    </div> 
+  </div>
+';
 
     echo $element;
 }

@@ -24,8 +24,8 @@ session_start();
 </head>
 
 <body>
-    <nav class="navbar box-shadow-y has-navbar-fixed-on-top" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
+    <nav class="navbar box-shadow-y is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand ">
             <a class="navbar-item" href="../../views/home.php">
                 <img src="../../models/imgs/logo.png">
             </a>
@@ -69,4 +69,8 @@ session_start();
         </div>
         </div>
     </nav>
+</body>
+
+<body>
+    <div style="padding-top: 60px;">
 </body>

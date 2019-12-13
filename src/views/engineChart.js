@@ -8,6 +8,7 @@
 // - Recibe .json
 // - Gererar gráfico lineal (Chart.js / D3.js)
 // - Punto Pronóstico mediante Regresión Lineal Simple (y = a + bx)
+// - Material de Referencia: https://medium.com/javascript-in-plain-english/exploring-chart-js-e3ba70b07aa4
 //==================================
 
 document.addEventListener("DOMContentLoaded", function(event) {

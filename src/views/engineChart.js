@@ -89,18 +89,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     data: fuel_economy,
                     lineTension: 0.1,
                     fill: false,
-                    backgroundColor: 'rgba(50,205,50,0.30)',
-                    borderColor: 'rgb(34,139,34)',
-                    borderWidth: 1
+                    borderColor: 'rgba( 93, 173, 226 , 1)',
+                    //backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 3
                 },
                 {
                     label: "Tasa de Costo",
                     data: cost_rate,
                     lineTension: 0.1,
-                    fill: false,
-                    backgroundColor: 'rgba(50,205,50,0.30)',
-                    borderColor: 'rgb(34,139,34)',
-                    borderWidth: 1
+                    fill: true,
+                    borderColor: 'rgba( 35, 155, 86, 1)',
+                    backgroundColor: 'rgba( 35, 155, 86, 0.10)',
+                    borderWidth: 2
                 }
             ]
         };
@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let LineGraph = new Chart(ctx, {
             type: "line",
             data: chartData
+
         });
     });
 });

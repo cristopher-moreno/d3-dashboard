@@ -45,11 +45,15 @@ session_start();
         <div class="navbar-end">
             <div class="navbar-item">
                 <?php
+
+                //! Variables de Sesiones
+
                 if (isset($_SESSION["usuario"])) {
                     echo '<h6 class="subtitle is-6">Bienvenido, ' . $_SESSION["usuario"] . '</h6>';
                 } else {
                     echo '<h6 class="subtitle is-6">Bienvenido, Invitado</h6>';
                 }
+
                 ?>
             </div>
         </div>

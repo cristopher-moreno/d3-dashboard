@@ -94,10 +94,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             //?Δ = ( v.nuevo - v.antiguo)/v.antiguo
             ahorro = 100 * ((fuel_economy[n - 1] - fuel_economy[n - 2]) / fuel_economy[n - 2]);
             if (ahorro > 0) {
-                console.log("Ahorro Gasolina: +" + ahorro + "%");
-
+                document.cookie = "ahorro=" + ahorro;
+            } else {
+                document.cookie = "ahorro=0";
             }
-
         }
 
         let chartData = {

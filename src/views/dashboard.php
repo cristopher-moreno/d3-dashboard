@@ -25,8 +25,14 @@ $engineControl->exportEngineData($engineJson);
 ?>
 
 <body>
-    <div class="chart-container "style="padding-top: 50px;">
+    <div class="chart-container " style="padding-top: 50px;">
         <canvas id="mycanvas"></canvas>
+    </div>
+    <div>
+        <?php
+        echo $_COOKIE['ahorro'];
+        getAhorroGasolina($_COOKIE['ahorro']);
+        ?>
     </div>
 </body>
 

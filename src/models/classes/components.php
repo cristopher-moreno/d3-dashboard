@@ -109,18 +109,19 @@ function setNumber3d($e, $label)
 function getBarAhorro($label, $n)
 {
     $element = '
-    <nav class="level-left">
+    <div class="box">
+        <nav class="level-left">
         <div class="level-item has-text-centered" >
             <div>
                 <p class="heading">' . $label . '</p>
                 <p class="title">'.round($n, 1).' %</p>
             </div> 
         </div>
-    </nav>
-
-    <div>
-        <progress class="progress is-link" value="' . $n . '" max="100">' . $n . '%</progress>
-    </div> 
+    </nav>      
+        <div >
+            <progress class="progress is-link" value="' . $n . '" max="100">' . $n . '%</progress>
+        </div> 
+    </div>
     ';
 
     echo $element;

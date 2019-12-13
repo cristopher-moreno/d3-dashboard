@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             let xnueva = 0;
             let y = 0;
 
+            let tendencia = 0;
+            let precision = 1000; //? Para redondeo a 3 posiciones decimales usar 1000
+
             n = fe.length;
 
             //! Calculando Sumatorias: (acumuladores)
@@ -81,6 +84,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             trip_id[0] = "";
             trip_id.push(label);
             fuel_economy.push(y);
+
+            tendencia = ((Math.round((((fuel_economy[n]) - (fuel_economy[n - 1])) / (fuel_economy[n - 1])) * precision)) / precision);
+            console.log("Tendencia: ", tendencia, "%");
+
         }
 
         let chartData = {

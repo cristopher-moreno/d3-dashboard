@@ -13,6 +13,7 @@
 
 include("../models/classes/header.php");
 require_once("../models/classes/engineData.php");
+require_once("../models/classes/components.php");
 
 $engineControl = new EngineData();
 $engineArray = $engineControl->getEngineData();

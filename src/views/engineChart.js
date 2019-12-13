@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             let xnueva = 0;
             let y = 0;
 
+            let ahorro = 0;
             let tendencia = 0;
             let precision = 1000; //? Para redondeo a 3 posiciones decimales usar 1000
 
@@ -85,9 +86,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
             trip_id.push(label);
             fuel_economy.push(y);
 
-            //Formula de Tendencia: Δ = ( v.nuevo - v.antiguo)/v.antiguo
+            //Formula de Tendencia: 
+            //?Δ = ( v.nuevo - v.antiguo)/v.antiguo
             tendencia = ((Math.round((((fuel_economy[n]) - (fuel_economy[n - 1])) / (fuel_economy[n - 1])) * precision)) / precision);
-            console.log("Tendencia: ", tendencia, "%");
+            console.log("Tendencia Regresión Lineal: ", tendencia, "%");
+
+            //?Δ = ( v.nuevo - v.antiguo)/v.antiguo
+            ahorro = 100 * ((fuel_economy[n - 1] - fuel_economy[n - 2]) / fuel_economy[n - 2]);
+            if (ahorro > 0) {
+                console.log("Ahorro Gasolina: +" + ahorro + "%");
+
+            }
 
         }
 

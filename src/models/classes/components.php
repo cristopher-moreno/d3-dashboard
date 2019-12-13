@@ -106,12 +106,10 @@ function setNumber3d($e, $label)
 
 
 
-function getAhorroGasolina($n)
+function getBarAhorro($n)
 {
     $element = '
-    <div class="progress">
-    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="'.$n.'" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
+    <progress class="progress is-link" value="' . $n . '" max="100">30%</progress>;
   ';
     echo $element;
 }

@@ -14,15 +14,15 @@
 
 function submitForm($typeElement, $texto)
 {
-  $element = '<div class="buttons" style="padding-top: 20px;width: 100px;">
+    $element = '<div class="buttons" style="padding-top: 20px;width: 100px;">
       <button name="submit" class="button ' . $typeElement . '">' . $texto . '</button>
     </div>';
-  echo $element;
+    echo $element;
 }
 
 function setField($e, $label)
 {
-  $element = '
+    $element = '
   <div class="forms" style="width: 200px;">
         <div class="forms">
             <div class="field">
@@ -33,13 +33,13 @@ function setField($e, $label)
             </div>
         </div>
   ';
-  echo $element;
+    echo $element;
 }
 
 
 function setUser($e, $label)
 {
-  $element = '
+    $element = '
   <div class="forms" style="width: 200px;">
         <div class="forms">
             <div class="field">
@@ -50,13 +50,13 @@ function setUser($e, $label)
             </div>
         </div>
   ';
-  echo $element;
+    echo $element;
 }
 
 
 function setIntNumber($e, $label)
 {
-  $element = '
+    $element = '
   <div class="forms" style="width: 200px;">
         <div class="forms">
             <div class="field">
@@ -67,13 +67,13 @@ function setIntNumber($e, $label)
             </div>
         </div>
   ';
-  echo $element;
+    echo $element;
 }
 
 
 function setNumber2d($e, $label)
 {
-  $element = '
+    $element = '
   <div class="forms" style="width: 200px;">
         <div class="forms">
             <div class="field">
@@ -84,13 +84,13 @@ function setNumber2d($e, $label)
             </div>
         </div>
   ';
-  echo $element;
+    echo $element;
 }
 
 
 function setNumber3d($e, $label)
 {
-  $element = '
+    $element = '
   <div class="forms" style="width: 200px;">
         <div class="forms">
             <div class="field">
@@ -101,5 +101,17 @@ function setNumber3d($e, $label)
             </div>
         </div>
   ';
-  echo $element;
+    echo $element;
+}
+
+
+
+function getAhorroGasolina($n)
+{
+    $element = '
+    <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+  </div>
+  ';
+    echo $element;
 }

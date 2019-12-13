@@ -25,11 +25,11 @@ $engineControl->exportEngineData($engineJson);
 ?>
 
 <body>
-    <div class="chart-container " style="padding-top: 50px;">
+    <div class="chart-container " style="padding-top: 30px;padding-left: 25px;">
         <canvas id="mycanvas"></canvas>
-        <div style="padding-top: 50px;">
+        <div style="padding-top: 20px; padding-left: 30px;">
             <?php
-            getBarAhorro($_COOKIE['ahorro']);
+            getBarAhorro("Ahorro de Gasolina",$_COOKIE['ahorro']);
             ?>
         </div>
     </div>

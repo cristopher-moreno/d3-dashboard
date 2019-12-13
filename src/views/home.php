@@ -12,8 +12,6 @@
 require_once("../models/classes/components.php");
 include("../models/classes/header.php");
 
-//Ternary Operator in PH:
-
 if (isset($_POST["submit"])) {
     if ($_POST["usuario"] != "") {
         $_SESSION['usuario'] = $_POST["usuario"];

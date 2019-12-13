@@ -27,7 +27,7 @@ $engineControl->exportEngineData($engineJson);
 <body>
     <div class="chart-container " style="padding-top: 50px;">
         <canvas id="mycanvas"></canvas>
-        <div style="padding-top: 50px;>
+        <div style="padding-top: 50px;">
             <?php
             getBarAhorro($_COOKIE['ahorro']);
             ?>

@@ -108,8 +108,7 @@ function setNumber3d($e, $label)
 
 function getBarAhorro($n)
 {
-    $element = '
-    <progress class="progress is-link" value="' . $n . '" max="100">30%</progress>;
-  ';
+    $element = '<progress class="progress is-link" value="' . $n . '" max="100">' . $n . '%</progress>';
+
     echo $element;
 }

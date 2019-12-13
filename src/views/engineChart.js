@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             trip_id.push(label);
             fuel_economy.push(y);
 
+            //Formula de Tendencia: Δ = ( v.nuevo - v.antiguo)/v.antiguo
             tendencia = ((Math.round((((fuel_economy[n]) - (fuel_economy[n - 1])) / (fuel_economy[n - 1])) * precision)) / precision);
             console.log("Tendencia: ", tendencia, "%");
 

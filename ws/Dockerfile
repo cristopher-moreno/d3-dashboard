@@ -13,5 +13,7 @@ RUN docker-php-ext-enable pdo
 RUN docker-php-ext-enable pdo_mysql 
 
 #Modificar permisos sobre carpetas:
-RUN chown -R www-data:www-data /var/www
-RUN chmod -R 755 /var/www
+RUN mkdir -p /var/www/html/models/classes/ && \
+chown -R www-data:www-data /var/www && \
+chmod -R 755 /var/www && \
+chmod 777 -R /var/www/html

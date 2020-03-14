@@ -23,15 +23,10 @@ class EngineData extends DbConnect
 
     public function exportEngineData($data)
     {
-        //print_r($data);
+        print_r($data);
 
         $filename = 'engine.json';
-
-        if (file_put_contents($filename, $data)) {
-            //! Se exporta .json llamado 'engine.json'
-        } else {
-            echo ('Some error happened.');
-        }
+        file_put_contents($filename, $data);
     }
 
     public function setEngineData($TRIP_ID, $TIME,  $FUEL_ECONOMY, $COST_RATE)
